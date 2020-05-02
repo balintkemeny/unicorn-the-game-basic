@@ -6,9 +6,6 @@ canvas.height = 400
 const context = canvas.getContext('2d')
 
 //Load assets
-const sprite = new Image()
-sprite.src = './assets/sprite.png'
-
 const unicornSprite = new Image()
 unicornSprite.src = './assets/unicorn2c.png'
 
@@ -73,7 +70,6 @@ function changeCostume() {
 }
 
 function createTree() {
-  //let costume = Math.trunc(Math.random() * 3)
   let costume = 0
   let tree = {
     x: canvas.width,
@@ -86,14 +82,12 @@ function createTree() {
 
 function draw() {
   context.clearRect(0, 0, canvas.width, canvas.height)
-  //context.drawImage(sprite, unicorn.costume * 46, 0, 46, 46, unicorn.x, ground - unicorn.y, 46, 46)
   context.drawImage(bgImage, 0, 0)
   context.drawImage(groundImage, 0, ground)
   context.drawImage(unicornSprite, unicorn.costume * unicornSize.x, 0, unicornSize.x, unicornSize.y, 
                     unicorn.x, ground - (unicornSize.y + unicorn.y) + unicornSize.verticalBias, unicornSize.x, unicornSize.y)
   context.strokeStyle = 'black'
   context.font = '18px Arial'
-  //context.fillText(Math.trunc(score / (1000 / 60)), 10, 30)
   context.fillText(score, 10, 30)
   trees.forEach(drawTree)
 }
