@@ -1,0 +1,10 @@
+#container {
+    width: 800px;
+    margin: 0 auto;
+}
+
+p {
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+}
