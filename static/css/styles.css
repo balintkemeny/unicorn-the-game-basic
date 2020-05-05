@@ -1,3 +1,8 @@
+body {
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); 
+}
+
 #container {
     width: 800px;
     margin: 0 auto;
@@ -7,4 +12,5 @@ p {
     text-align: center;
     font-size: 24px;
     font-family: 'Montserrat', sans-serif;
+    color: whitesmoke;
 }
